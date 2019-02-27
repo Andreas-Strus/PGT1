@@ -1,0 +1,4 @@
+CREATE DATABASE TASK_1;
+use TASK_1;
+CREATE TABLE Task_1_Panda_Group (user_ID int Not NUll AUTO_INCREMENT, first_name varchar(40)not null, last_name varchar(40),email varchar(40)not null, is_active bit not null, password varchar(60) not null, created_at datetime, updeated_at datetime, gender enum('B','G'), PRIMARY KEY (user_ID));
+CREATE Table Task_1_News (note_ID int not null AUTO_INCREMENT, name varchar(100) not null, descryption varchar(65386), is_active bit not null, created_at datetime, updeated_at datetime, author_id int not null, PRIMARY KEY(note_id), FOREIGN KEY(author_id) REFERENCES Task_1_Panda_Group(user_ID));
